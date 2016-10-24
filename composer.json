@@ -1,0 +1,26 @@
+{
+    "name": "black-lamp/yii2-text-editor",
+    "description": "Widget for Ace code editor",
+    "keywords": ["yii2", "widget", "ace", "code", "editor"],
+    "type": "yii2-extension",
+    "license": "GNU Public License",
+    "support": {
+        "source": "https://github.com/black-lamp/yii2-code-editor",
+        "issues": "https://github.com/black-lamp/yii2-code-editor/issues"
+    },
+    "require": {
+        "yiisoft/yii2": ">=2.0.4",
+        "bower-asset/ace-builds": "1.2.*"
+    },
+    "authors": [
+        {
+            "name": "Vladimir Kuprienko",
+            "email": "vldmr.kuprienko@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "bl\\ace\\": ""
+        }
+    }
+}
