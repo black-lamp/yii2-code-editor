@@ -1,15 +1,19 @@
 # Code editor for Yii2
 Widget for [Ace](https://ace.c9.io) code editor
 
+[![Latest Stable Version](https://poser.pugx.org/black-lamp/yii2-text-editor/version)](https://packagist.org/packages/black-lamp/yii2-text-editor)
+[![Latest Unstable Version](https://poser.pugx.org/black-lamp/yii2-text-editor/v/unstable)](//packagist.org/packages/black-lamp/yii2-text-editor)
+[![License](https://poser.pugx.org/black-lamp/yii2-text-editor/license)](https://packagist.org/packages/black-lamp/yii2-text-editor)
+
 Installation
 ------------
 #### Run command
 ```
-composer require black-lamp/yii2-code-editor
+composer require black-lamp/yii2-text-editor
 ```
 or add
 ```json
-"black-lamp/yii2-yii2-code-editor": "*"
+"black-lamp/yii2-yii2-text-editor": "*"
 ```
 to the require section of your composer.json.
 
