@@ -10,13 +10,13 @@ use bl\ace\assets\EmmetExtAsset;
 use bl\ace\assets\EmmetCoreAsset;
 
 /**
+ * Widget for Ace code editor
+ *
  * @author Vladimir Kuprienko <vldmr.kuprienko@gmail.com>
  *
  * @link https://github.com/black-lamp/yii2-code-editor
  * @link https://github.com/ajaxorg/ace
  * @license https://opensource.org/licenses/GPL-3.0 GNU Public License
- *
- * Widget for Ace code editor
  *
  * @property string $language
  * @property string $theme

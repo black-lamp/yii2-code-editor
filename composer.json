@@ -1,5 +1,5 @@
 {
-    "name": "black-lamp/yii2-text-editor",
+    "name": "black-lamp/yii2-code-editor",
     "description": "Widget for Ace code editor",
     "keywords": ["yii2", "widget", "ace", "code", "editor"],
     "type": "yii2-extension",
