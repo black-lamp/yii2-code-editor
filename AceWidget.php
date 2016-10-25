@@ -27,7 +27,7 @@ use bl\ace\assets\EmmetCoreAsset;
  * @property string $attribute
  * @property array $options
  */
-class Ace extends InputWidget
+class AceWidget extends InputWidget
 {
     /**
      * @var string Programming language
