@@ -15,4 +15,21 @@ class AceAsset extends AssetBundle
     public $js = [
         'ace.js'
     ];
+
+    /**
+     * @inheritdoc
+     */
+    public static function register($view, $enableEmmet = false)
+    {
+        $boundle = parent::register($view);
+
+        if($enableEmmet) {
+            $view->registerJsFile($boundle->baseUrl . '/ext-emmet.js', [
+                'depends' => 'bl\ace\assets\EmmetCoreAsset'
+            ],
+            'ACE_EXT_EMMET');
+        }
+
+        return $boundle;
+    }
 }

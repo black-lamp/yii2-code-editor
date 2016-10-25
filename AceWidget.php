@@ -51,7 +51,7 @@ class AceWidget extends InputWidget
     public function init()
     {
         parent::init();
-        AceAsset::register($this->view);
+        AceAsset::register($this->view, $this->enableEmmet);
 
         $widget_id = mb_substr($this->id, 1);
 
@@ -65,9 +65,6 @@ class AceWidget extends InputWidget
         ";
 
         if($this->enableEmmet) {
-            EmmetCoreAsset::register($this->view);
-            EmmetExtAsset::register($this->view);
-
             $init_text_editor .= "
                 aceEditor.setOption('enableEmmet', true);
             ";
