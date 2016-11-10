@@ -13,13 +13,13 @@ composer require black-lamp/yii2-text-editor
 ```
 or add
 ```json
-"black-lamp/yii2-yii2-text-editor": "*"
+"black-lamp/yii2-yii2-text-editor": "1.0.0"
 ```
 to the require section of your composer.json.
 
 Using
 -----
-Use [bl\ace\Ace](https://github.com/black-lamp/yii2-code-editor/blob/master/Ace.php) widget with ActiveForm
+Use widget with ActiveForm
 ```php
 $form = ActiveForm::begin();
     // ...
@@ -28,12 +28,12 @@ $form = ActiveForm::begin();
     ]);
 $form->end();
 ```
-#### Widget configuration attributes
-| Name | Data type | Value | Defaul value |
+#### Widget configuration properties
+| Option | Option | Default | Description |
 |---|---|---|---|
-|language|string|Programming language|html| 
-|theme|string|Code editor theme|github|
-|enableEmmet|boolean|Enable emmet plugin for HTML|false|
-|attributes|array|HTML attributes for editor container|'style' => 'max-width: 600px; min-height: 400px;'|
+|language|string|html|Programming language| 
+|theme|string|github|Code editor theme|
+|enableEmmet|boolean|false|Enable emmet plugin for HTML|
+|attributes|array|['style' => 'max-width: 600px; min-height: 400px;']|HTML attributes for editor container|
 
 For more information about 'language' and 'theme' configuration attributes read [Ace documentation](https://ace.c9.io/#nav=howto)

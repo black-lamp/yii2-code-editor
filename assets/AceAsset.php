@@ -21,6 +21,7 @@ class AceAsset extends AssetBundle
      */
     public static function register($view, $enableEmmet = false)
     {
+        /** @var AssetBundle $boundle */
         $boundle = parent::register($view);
 
         if($enableEmmet) {

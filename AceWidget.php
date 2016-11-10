@@ -6,8 +6,6 @@ use yii\helpers\Html;
 use yii\widgets\InputWidget;
 
 use bl\ace\assets\AceAsset;
-use bl\ace\assets\EmmetExtAsset;
-use bl\ace\assets\EmmetCoreAsset;
 
 /**
  * Widget for Ace code editor
@@ -33,14 +31,17 @@ class AceWidget extends InputWidget
      * @var string Programming language
      */
     public $language = 'html';
+
     /**
      * @var string Editor theme
      */
     public $theme = 'github';
+
     /**
      * @var boolean Enable emmet extension
      */
     public $enableEmmet = false;
+
     /**
      * @var array HTML attributes for editor container
      */

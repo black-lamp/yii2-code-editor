@@ -10,7 +10,7 @@ use yii\web\AssetBundle;
  */
 class EmmetCoreAsset extends AssetBundle
 {
-    public $sourcePath = "@common/widgets/ace/assets";
+    public $sourcePath = "@vendor/black-lamp/yii2-text-editor/assets";
 
     public $js = [
         'js/emmet.js'
