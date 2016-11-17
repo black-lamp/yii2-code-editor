@@ -29,11 +29,11 @@ $form = ActiveForm::begin();
 $form->end();
 ```
 #### Widget configuration properties
-| Option | Option | Default | Description |
+| Option | Description | Type | Default |
 |---|---|---|---|
-|language|string|html|Programming language| 
-|theme|string|github|Code editor theme|
-|enableEmmet|boolean|false|Enable emmet plugin for HTML|
-|attributes|array|['style' => 'max-width: 600px; min-height: 400px;']|HTML attributes for editor container|
+|language|Programming language| string|html|
+|theme|Code editor theme|string|github|
+|enableEmmet|Enable emmet plugin for HTML|boolean|false|
+|attributes|HTML attributes for editor container|array|['style' => 'max-width: 600px; min-height: 400px;']|
 
 For more information about 'language' and 'theme' configuration attributes read [Ace documentation](https://ace.c9.io/#nav=howto)
