@@ -1,4 +1,10 @@
 <?php
+/**
+ * @link https://github.com/black-lamp/yii2-code-editor
+ * @copyright Copyright (c) 2016-2017 Vladimir Kuprienko
+ * @license BSD 3-Clause License
+ */
+
 namespace bl\ace\assets;
 
 use yii\web\AssetBundle;
@@ -10,11 +16,17 @@ use yii\web\AssetBundle;
  */
 class AceAsset extends AssetBundle
 {
+    /**
+     * @inheritdoc
+     */
     public $sourcePath = "@bower/ace-builds/src-min-noconflict";
-
+    /**
+     * @inheritdoc
+     */
     public $js = [
         'ace.js'
     ];
+
 
     /**
      * @inheritdoc

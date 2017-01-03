@@ -1,4 +1,10 @@
 <?php
+/**
+ * @link https://github.com/black-lamp/yii2-code-editor
+ * @copyright Copyright (c) 2016-2017 Vladimir Kuprienko
+ * @license BSD 3-Clause License
+ */
+
 namespace bl\ace;
 
 use yii\base\Model;
@@ -10,12 +16,6 @@ use bl\ace\assets\AceAsset;
 /**
  * Widget for Ace code editor
  *
- * @author Vladimir Kuprienko <vldmr.kuprienko@gmail.com>
- *
- * @link https://github.com/black-lamp/yii2-code-editor
- * @link https://github.com/ajaxorg/ace
- * @license https://opensource.org/licenses/GPL-3.0 GNU Public License
- *
  * @property string $language
  * @property string $theme
  * @property array $attributes
@@ -24,6 +24,8 @@ use bl\ace\assets\AceAsset;
  * @property Model $model
  * @property string $attribute
  * @property array $options
+ *
+ * @author Vladimir Kuprienko <vldmr.kuprienko@gmail.com>
  */
 class AceWidget extends InputWidget
 {
@@ -31,17 +33,14 @@ class AceWidget extends InputWidget
      * @var string Programming language
      */
     public $language = 'html';
-
     /**
-     * @var string Editor theme
+     * @var string Editor's theme
      */
     public $theme = 'github';
-
     /**
      * @var boolean Enable emmet extension
      */
     public $enableEmmet = false;
-
     /**
      * @var array HTML attributes for editor container
      */
@@ -49,38 +48,41 @@ class AceWidget extends InputWidget
         'style' => 'max-width: 600px; min-height: 400px;'
     ];
 
+
+    /**
+     * @inheritdoc
+     */
     public function init()
     {
         parent::init();
+
         AceAsset::register($this->view, $this->enableEmmet);
 
-        $widget_id = mb_substr($this->id, 1);
+        $widgetId = mb_substr($this->id, 1);
 
-        // init text editor JavaScripts
-        $editor_id = 'ace-editor-' . $widget_id;
+        // init text editor scripts
+        $editorId = 'ace-editor-' . $widgetId;
 
-        $init_text_editor = "
-            var aceEditor = ace.edit('$editor_id');
+        $initTextEditor = <<< JS
+            var aceEditor = ace.edit('$editorId');
             aceEditor.setTheme('ace/theme/$this->theme');
             aceEditor.getSession().setMode('ace/mode/$this->language');
-        ";
+JS;
 
         if($this->enableEmmet) {
-            $init_text_editor .= "
-                aceEditor.setOption('enableEmmet', true);
-            ";
+            $initTextEditor .= "aceEditor.setOption('enableEmmet', true);";
         }
 
-        $this->view->registerJs($init_text_editor);
+        $this->view->registerJs($initTextEditor);
 
-        // Init textaream Javascripts
-        $this->attributes['id'] = $editor_id;
+        // Init textarea scripts
+        $this->attributes['id'] = $editorId;
 
-        $textarea_id = 'ace-textarea-' . $widget_id;
-        $this->options['id'] = $textarea_id;
+        $textareaId = 'ace-textarea-' . $widgetId;
+        $this->options['id'] = $textareaId;
 
-        $init_textarea = "
-            var textarea = document.getElementById('$textarea_id');
+        $initTextarea = <<< JS
+            var textarea = document.getElementById('$textareaId');
             textarea.style.display = 'none';
             
             aceEditor.setValue(
@@ -90,10 +92,13 @@ class AceWidget extends InputWidget
             aceEditor.on('change', function(e) {
                 textarea.value = aceEditor.getValue();
             });
-        ";
-        $this->view->registerJs($init_textarea);
+JS;
+        $this->view->registerJs($initTextarea);
     }
 
+    /**
+     * @inheritdoc
+     */
     public function run()
     {
         $content = Html::tag('div', '', $this->attributes);
