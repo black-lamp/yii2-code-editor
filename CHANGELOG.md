@@ -4,6 +4,7 @@ black-lamp/yii2-code-editor commits history
 ## [2.0.0] - 2017-03-01
 
 - Changed license
+- Changed project files structure
 - Refactored code
 
 ## [1.0.0] - 2016-11-25
