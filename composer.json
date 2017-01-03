@@ -3,19 +3,28 @@
     "description": "Widget for Ace code editor",
     "keywords": ["yii2", "widget", "ace", "code", "editor"],
     "type": "yii2-extension",
-    "license": "GNU Public License",
+    "license": "BSD-3-Clause",
     "support": {
         "source": "https://github.com/black-lamp/yii2-code-editor",
         "issues": "https://github.com/black-lamp/yii2-code-editor/issues"
     },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ],
     "require": {
-        "yiisoft/yii2": ">=2.0.4",
-        "bower-asset/ace-builds": "1.2.*"
+        "yiisoft/yii2": "^2.0.4",
+        "bower-asset/ace-builds": "1.2.*",
+        "bower-asset/emmet-core-js": "dev-master"
+
     },
     "authors": [
         {
             "name": "Vladimir Kuprienko",
-            "email": "vldmr.kuprienko@gmail.com"
+            "email": "vldmr.kuprienko@gmail.com",
+            "role": "lead"
         }
     ],
     "autoload": {
